@@ -1,0 +1,11 @@
+@import "src/components/UI/styles/mixins/Button.scss";
+
+.ContinueButton {
+  @include Button;
+  @include Success;
+}
+
+.CancelButton {
+  @include Button;
+  @include Danger;
+}
