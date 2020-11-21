@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './OrderSummary.module.scss'
 
@@ -33,5 +34,18 @@ const OrderSummary = props => {
       </Fragment>
   )
 };
+
+OrderSummary.propTypes = {
+    ingredients: PropTypes.shape({
+        salad: PropTypes.number,
+        cheese: PropTypes.number,
+        meat: PropTypes.number,
+        bacon: PropTypes.number
+    }),
+    price: PropTypes.number,
+    purchaseCanceled: PropTypes.func,
+    purchaseContinued: PropTypes.func
+
+}
 
 export default OrderSummary;

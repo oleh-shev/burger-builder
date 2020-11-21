@@ -4,6 +4,7 @@ import classes from './Toolbar.module.scss';
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems"
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
+import PropTypes from 'prop-types';
 
 const Toolbar = props => (
     <header className={classes.Toolbar}>
@@ -16,5 +17,9 @@ const Toolbar = props => (
         </nav>
     </header>
 );
+
+Toolbar.propTypes = {
+    drawerToggleClicked: PropTypes.func
+}
 
 export default Toolbar;

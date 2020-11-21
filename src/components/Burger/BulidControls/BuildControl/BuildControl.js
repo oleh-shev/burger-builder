@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './BuildControl.module.scss';
+import PropTypes from 'prop-types';
 
 const BuildControl = props => (
     <div className={classes.BuildControl}>
@@ -20,5 +21,12 @@ const BuildControl = props => (
     </div>
 
 );
+
+BuildControl.propTypes = {
+    label: PropTypes.string,
+    removed: PropTypes.func,
+    disabled: PropTypes.bool,
+    added: PropTypes.func
+}
 
 export default BuildControl;

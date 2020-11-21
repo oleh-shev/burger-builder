@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Burger.module.scss';
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
+import PropTypes from 'prop-types';
 
 const Burger = props => {
     let transformedIngredients = Object.keys(props.ingredients)
@@ -26,5 +27,15 @@ const Burger = props => {
         </div>
     );
 };
+
+Burger.propTypes = {
+    ingredients: PropTypes.shape({
+        salad: PropTypes.number,
+        cheese: PropTypes.number,
+        meat: PropTypes.number,
+        bacon: PropTypes.number,
+    }),
+
+}
 
 export default Burger;

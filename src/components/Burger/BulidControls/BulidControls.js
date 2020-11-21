@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './BulidControls.module.scss';
 import BuildControl from "./BuildControl/BuildControl";
+import PropTypes from 'prop-types';
 
 const controls = [
     { label: 'Salad', type: 'salad' },
@@ -30,5 +31,19 @@ const BuildControls = props => (
         </button>
     </div>
 );
+
+BuildControls.propTypes = {
+    price: PropTypes.number,
+    ingredientAdded: PropTypes.func,
+    ingredientRemoved: PropTypes.func,
+    disabled: PropTypes.shape({
+        salad: PropTypes.bool,
+        bacon: PropTypes.bool,
+        cheese: PropTypes.bool,
+        meat: PropTypes.bool
+    }),
+    purchasable: PropTypes.bool,
+    ordered: PropTypes.func
+}
 
 export default BuildControls;
