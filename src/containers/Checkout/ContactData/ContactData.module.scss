@@ -9,14 +9,14 @@
   padding: 10px;
   box-sizing: border-box;
 
-  input {
-    display: block;
-    width: 90%;
-  }
-
   .OrderButton {
     @include Button;
     @include Success
+
+    &:disabled {
+      color: #ccc;
+      cursor: not-allowed;
+    }
   }
 }
 
