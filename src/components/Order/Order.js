@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './Order.module.scss'
 
@@ -25,5 +26,15 @@ const Order = props => {
         </div>
     )
 };
+
+Order.propTypes = {
+    ingredients: PropTypes.shape({
+        salad: PropTypes.number,
+        cheese: PropTypes.number,
+        meat: PropTypes.number,
+        bacon: PropTypes.number,
+    }),
+    price: PropTypes.number
+}
 
 export default Order;
