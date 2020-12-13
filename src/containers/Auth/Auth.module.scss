@@ -1,6 +1,6 @@
 @import "src/assets/styles/mixins/Button";
 
-.ContactData {
+.Auth {
   margin: 20px auto;
   width: 80%;
   text-align: center;
@@ -9,7 +9,7 @@
   padding: 10px;
   box-sizing: border-box;
 
-  .OrderButton {
+  .AuthButton {
     @include Button;
     @include Success;
 
@@ -21,8 +21,7 @@
 }
 
 @media (min-width: 600px) {
-  .ContactData {
+  .Auth {
     width: 500px;
   }
 }
-
