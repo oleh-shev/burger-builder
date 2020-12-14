@@ -9,7 +9,7 @@
   padding: 10px;
   box-sizing: border-box;
 
-  .AuthButton {
+  .SubmitButton {
     @include Button;
     @include Success;
 
@@ -17,6 +17,11 @@
       color: #ccc;
       cursor: not-allowed;
     }
+  }
+
+  .SwitchButton {
+    @include Button;
+    @include Danger
   }
 }
 
