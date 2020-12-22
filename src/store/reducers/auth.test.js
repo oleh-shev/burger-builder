@@ -1,6 +1,5 @@
 import reducer from "./auth";
 import * as actionTypes from "../actions/actionTypes";
-import {AUTH_SUCCESS} from "../actions/actionTypes";
 
 describe('auth reducer', () => {
     const initialState = {
